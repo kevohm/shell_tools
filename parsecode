@@ -1,1 +1,9 @@
 #!/bin/bash
+if [[ $# -eq 1 && -f $1 ]];then
+	file=$(file $1)
+	if [ $file -eq "py" ];then
+		autopep8 --in-place --aggressive --aggressive $1
+	else
+		echo '<USAGE>: parsecode filename'
+	fi
+fi
