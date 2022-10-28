@@ -8,3 +8,7 @@ git config --global credential.helper store
 git config --global user.email <email>
 git config --global user.name <name>
 ```
+# set to mathing
+```
+ git config --global push.default matching
+```
