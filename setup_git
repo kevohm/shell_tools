@@ -1,0 +1,12 @@
+#!/bin/bash
+msg=""
+if [ $# == 2 ];then
+	msg="Setting up your data"
+	echo "$msg"
+	git config --global user.email $1
+	git config --global user.name $2
+	git config --global credential.helper store
+	echo "All setup :)"
+else
+	echo "Usage: setup_git <email> <username>"
+fi
