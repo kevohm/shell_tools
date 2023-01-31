@@ -1,7 +1,13 @@
 #!/bin/bash
+msg=""
 if [ $# -ge 1 ];then
 	git add .
-	git commit -m "$@"
+	for i in $@
+	do
+		msg=$($msg + $i)
+	done
+	echo msg
+	git commit -m "$1"
 	git push
 	sleep 3
 	clear
