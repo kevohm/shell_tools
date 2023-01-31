@@ -6,7 +6,7 @@ if [ $# -ge 1 ];then
 	do
 		msg=$($msg + $i)
 	done
-	echo msg
+	echo $msg
 	git commit -m "$1"
 	git push
 	sleep 3
