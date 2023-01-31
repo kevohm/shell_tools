@@ -4,7 +4,7 @@ if [ $# -ge 1 ];then
 	git add .
 	for i in $@
 	do
-		msg=$($msg + $i)
+		msg="$msg$i"
 	done
 	echo $msg
 	git commit -m "$1"
