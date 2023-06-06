@@ -6,5 +6,4 @@ if sudo -v;then
 	sudo cp push parsecode setup_git $MAIN_BIN
 else
 	echo You are not root!
-
 fi

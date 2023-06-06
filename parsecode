@@ -2,6 +2,7 @@
 if [[ $# -eq 1 && -f $1 ]];then
 	file=$(file $1)
 	if [ $file -eq "py" ];then
+		pip install --upgrade autopep8
 		autopep8 --in-place --aggressive --aggressive $1
 	else
 		echo '<USAGE>: parsecode filename'
